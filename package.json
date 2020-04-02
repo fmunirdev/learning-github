@@ -1,0 +1,19 @@
+{
+  "name": "learning-github",
+  "version": "1.0.0",
+  "description": "Demo site for Git & GitHub Training session by HCS Tech Team",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "keywords": [
+    "demo",
+    "git",
+    "github"
+  ],
+  "author": "Fahad Munir",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
