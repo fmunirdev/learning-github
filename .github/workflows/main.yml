@@ -15,5 +15,5 @@ jobs:
         env:
           VAR1: hi
         with:
-          variableNames: VAR1
+          variableName: VAR1
       - run: cat .env
