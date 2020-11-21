@@ -14,6 +14,10 @@ jobs:
       - uses: fmunirdev/envvar-to-dotenv-action@v0.1.0
         env:
           VAR1: hi
+          VAR2: hel
+          VAR3: hell
+          VAR4: hello
         with:
           variableName: VAR1
+          variableNames: VAR2,VAR3,VAR4
       - run: cat .env
