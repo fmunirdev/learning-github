@@ -11,5 +11,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/workflows/composite-action
-      - run: echo "composite action completed."
+      - uses: fmunirdev/envvar-to-dotenv-action@v0.1.0
+        env:
+          VAR1: hi
+        with:
+          variableNames: VAR1
+      - run: cat .env

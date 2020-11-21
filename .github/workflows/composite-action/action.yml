@@ -1,9 +1,0 @@
-name: Create .env file
-runs:
-  using: composite
-  steps:
-  - run: |
-      touch .env
-      echo ENGINE_API_KEY =${{ secrets.ENGINE_API_KEY }} >> .env
-      ls
-    shell: bash
