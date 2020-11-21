@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo ENGINE_API_KEY =${{ secrets.ENGINE_API_KEY }} >> .env
+          cat .env
