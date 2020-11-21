@@ -11,13 +11,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: fmunirdev/envvar-to-dotenv-action@v0.1.0
+      - uses: actions/env-vars-to-dotenv@v0.1.0
         env:
           VAR1: hi
           VAR2: hel
           VAR3: hell
           VAR4: hello
+          ENGINE_API_KEY: ${{ secrets.ENGINE_API_KEY }}
         with:
           variableName: VAR1
-          variableNames: VAR2,VAR3,VAR4
+          variableNames: VAR2,VAR3,VAR4,ENGINE_API_KEY
       - run: cat .env
