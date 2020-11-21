@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/env-vars-to-dotenv@v0.1.0
+      - uses: fmunirdev/envvar-to-dotenv-action@v0.1.0
         env:
           VAR1: hi
           VAR2: hel
