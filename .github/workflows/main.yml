@@ -21,4 +21,10 @@ jobs:
         with:
           variableName: VAR1
           variableNames: VAR2,VAR3,VAR4,ENGINE_API_KEY
-      - run: cat .env
+
+      - name: 'Upload .env file as artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: dotenv
+          path: .env
+          retention-days: 1
